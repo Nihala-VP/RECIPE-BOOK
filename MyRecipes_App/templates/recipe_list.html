@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+
+{%block main_block%}
+
+{%for r in data%}
+
+<div class="container">
+
+    <h1>Recipe List</h1>
+
+
+
+    <p>ID:{{r.id}}</p>
+
+    <p>title:{{r.title}}</p>
+    <p>ID:{{r.id}}</p>
+
+    <p>description:{{r.description}}</p>
+    <p>ingredients:{{r.ingredients}}</p>
+    <p>cook_time:{{r.cook_time}}</p>
+
+    <p><a href="{%url 'recipe-remove' r.id%}">Remove</a></p>
+
+    
+    <p><a href="{%url 'recipe-update' r.id%}">update</a></p>
+</div>
+
+{%endfor%}
+
+{%endblock%}

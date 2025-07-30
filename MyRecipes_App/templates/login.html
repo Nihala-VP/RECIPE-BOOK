@@ -1,0 +1,22 @@
+
+{%extends 'base.html'%}
+
+{%block main_block%}
+
+<div class="container">
+
+    <form action="" method="post">
+
+        {{form.errors}}
+        <h1>SignIn</h1>
+
+        {%csrf_token%}
+
+        {{form}}
+
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+
+{%endblock%}

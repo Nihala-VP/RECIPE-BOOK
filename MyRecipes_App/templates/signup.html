@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+
+{%block main_block%}
+
+<div class="container">
+
+    {{form.errors}}
+
+    <form action="" method="post">
+        <h1>Registration</h1>
+
+        {%csrf_token%}
+
+        {{form}}
+
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+
+{%endblock%}

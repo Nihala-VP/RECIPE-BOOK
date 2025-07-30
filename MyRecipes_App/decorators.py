@@ -6,7 +6,7 @@ def signin_required(fn):
 
         if not request.user.is_authenticated:
 
-            return redirect("sign-in")
+            return redirect("signin")
         
         else:
 
